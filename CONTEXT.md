@@ -4,7 +4,9 @@ Glossary of domain terms. No implementation details here — those live in `docs
 
 ## Terms
 
-**Event** — Techstars Startup Weekend Skopje: a 3-day startup hackathon in Skopje, North Macedonia. The site promotes exactly one upcoming edition at a time.
+**Event** — Techstars Startup Weekend Skopje: a 3-day startup hackathon in Skopje, North Macedonia, running since 2011. The site promotes exactly one upcoming edition at a time (2026 = 14th edition).
+
+**Lead Organizer** — Startup Club Skopje, from the 2026 edition onward. Earlier editions (incl. 2025) were organized by Solveo.
 
 **Ticketing Redirect** — The "Buy Tickets" action. It never collects payment on this site; it hands the visitor off to an external Payment Provider. Until a provider is wired up, the action is a Stub.
 

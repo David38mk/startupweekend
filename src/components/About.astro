@@ -1,31 +1,76 @@
 ---
-const stats = [
-  { value: '54', label: 'hours from idea to pitch' },
-  { value: '430K+', label: 'entrepreneurs worldwide' },
-  { value: '150+', label: 'countries in the network' },
+const clubStats = [
+  { value: '450+', label: 'program applications' },
+  { value: '48', label: 'startups supported' },
+  { value: '3', label: 'completed cohorts' },
 ];
 ---
 
 <section id="about" class="mx-auto max-w-6xl scroll-mt-20 px-4 py-20 sm:px-6">
-  <h2 class="font-slab text-3xl font-bold text-brand sm:text-4xl">What is Startup Weekend?</h2>
-  <div class="mt-6 grid gap-10 lg:grid-cols-2">
-    <div class="space-y-4 text-lg leading-relaxed text-neutral-700">
+  <h2 class="text-3xl font-bold text-brand sm:text-4xl">About Startup Weekend Skopje</h2>
+  <div class="mt-6 max-w-3xl space-y-4 text-lg leading-relaxed text-neutral-700">
+    <p>
+      For 14 years, Startup Weekend Skopje has been bringing together young innovators,
+      entrepreneurs and changemakers in the heart of North Macedonia.
+    </p>
+    <p>
+      Since its first edition in 2011, it has become an important part of the local startup
+      ecosystem, a place where ideas become teams, teams become businesses, and new founders
+      take their first step. Over the years, the Startup Weekend Skopje community has helped
+      spark successful ventures such as <strong>Brainster</strong>, <strong>Ways2Help</strong>,
+      <strong>Challenger</strong>, <strong>Air Care</strong> and others.
+    </p>
+    <p>
+      In 2026, for its 14th edition, Startup Club Skopje officially takes over as the lead
+      organizer, bringing its experience in youth entrepreneurship, startup programs and
+      community building.
+    </p>
+    <p>
+      Our mission is simple: to give the next generation the tools, connections and confidence
+      to turn ideas into action.
+    </p>
+    <p class="font-medium text-brand">
+      Because every startup starts somewhere.
+      <em class="block">Sometimes, it starts in one weekend.</em>
+    </p>
+  </div>
+
+  <div class="mt-16 rounded-3xl bg-brand-light p-8 sm:p-12">
+    <h2 class="text-3xl font-bold text-brand sm:text-4xl">About Startup Club Skopje</h2>
+    <div class="mt-6 max-w-3xl space-y-4 text-lg leading-relaxed text-neutral-700">
       <p>
-        Techstars Startup Weekend is a 3-day hackathon where you pitch ideas, form teams,
-        validate a real problem, build a prototype, and present it to a panel of judges —
-        all in one weekend. Part of the global Techstars network that has launched more than
-        430,000 young entrepreneurs worldwide.
+        Startup Club Skopje is a non-governmental organization dedicated to strengthening and
+        growing the startup ecosystem in North Macedonia. Founded in 2019 and actively building
+        its community since 2023, Startup Club Skopje creates opportunities for young people,
+        founders, freelancers and innovators to learn, connect and build.
       </p>
       <p>
-        This edition focuses on <strong class="text-brand">FinTech</strong>: how technology
-        reshapes the way we save, spend, invest, and manage money. Developers, designers,
-        entrepreneurs, and students are all welcome — no experience required.
+        At the heart of its work is <strong>#ИмамИдеја</strong>, the country's only startup
+        incubation program. With 450+ applications, three successfully completed cohorts and
+        48 startups supported, the program continues to help turn early-stage ideas into real
+        ventures, with the fourth cohort set to launch in late 2026.
+      </p>
+      <p>
+        Beyond its programs, Startup Club Skopje brings the community together through its
+        podcasts <em>Startup Revolution</em> and <em>The Freelancers Hangout</em>, an open and
+        free coworking space, an event space, and a growing calendar of community events and
+        initiatives.
+      </p>
+      <p>
+        Startup Club Skopje is also the lead organizer of <strong>Startup Revolution AI
+        Summit</strong>, bringing together founders, startups, investors, innovators and the
+        wider tech community. In 2026, the second edition of the Summit is set to bring
+        together 2,000+ participants in Skopje.
+      </p>
+      <p>
+        Our mission is simple: build the community, create opportunities, and help the next
+        generation build what's next.
       </p>
     </div>
-    <div class="grid grid-cols-3 gap-4 self-center">
-      {stats.map((stat) => (
-        <div class="rounded-2xl bg-brand-light p-5 text-center">
-          <div class="font-slab text-3xl font-bold text-brand">{stat.value}</div>
+    <div class="mt-8 grid max-w-xl grid-cols-3 gap-4">
+      {clubStats.map((stat) => (
+        <div class="rounded-2xl bg-white p-5 text-center">
+          <div class="text-3xl font-bold text-brand">{stat.value}</div>
           <div class="mt-1 text-sm text-neutral-600">{stat.label}</div>
         </div>
       ))}

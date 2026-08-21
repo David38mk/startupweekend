@@ -8,8 +8,7 @@
   --color-accent: #e86e24;
   --color-accent-dark: #c95a17;
 
-  --font-sans: "Roboto", ui-sans-serif, system-ui, sans-serif;
-  --font-slab: "Roboto Slab", ui-serif, Georgia, serif;
+  --font-sans: "Helvetica Neue", Helvetica, Arial, ui-sans-serif, sans-serif;
 }
 
 html {
