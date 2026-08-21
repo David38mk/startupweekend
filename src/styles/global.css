@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  /* Startup Club Skopje brand palette (from their Elementor kit) */
+  --color-brand: #0e766d;
+  --color-brand-dark: #0a544e;
+  --color-brand-light: #eaf4f3;
+  --color-accent: #e86e24;
+  --color-accent-dark: #c95a17;
+
+  --font-sans: "Roboto", ui-sans-serif, system-ui, sans-serif;
+  --font-slab: "Roboto Slab", ui-serif, Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}

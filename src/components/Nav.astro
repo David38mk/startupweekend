@@ -1,0 +1,35 @@
+---
+import event from '../data/event.json';
+
+const links = [
+  { href: '#about', label: 'About' },
+  { href: '#speakers', label: 'Speakers' },
+  { href: '#sponsors', label: 'Sponsors' },
+  { href: '#tickets', label: 'Tickets' },
+];
+---
+
+<header class="sticky top-0 z-50 border-b border-neutral-200 bg-white/90 backdrop-blur">
+  <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
+    <a href="#top" class="font-slab text-lg font-bold text-brand">
+      {event.shortName}
+    </a>
+    <ul class="hidden items-center gap-6 text-sm font-medium sm:flex">
+      {links.map((link) => (
+        <li>
+          <a href={link.href} class="text-neutral-700 transition-colors hover:text-brand">
+            {link.label}
+          </a>
+        </li>
+      ))}
+      <li>
+        <a
+          href="#tickets"
+          class="rounded-full bg-accent px-4 py-2 font-bold text-white transition-colors hover:bg-accent-dark"
+        >
+          Buy Tickets
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>

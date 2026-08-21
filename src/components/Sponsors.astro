@@ -1,0 +1,52 @@
+---
+import sponsors from '../data/sponsors.json';
+import ComingSoon from './ComingSoon.astro';
+
+interface Sponsor {
+  name: string;
+  tier: string;
+  logo?: string;
+  url?: string;
+}
+
+const list = sponsors as Sponsor[];
+const tierOrder = ['Exclusive', 'Global Partner', 'Gold', 'Silver', 'Organizer', 'Partner'];
+const tiers = tierOrder
+  .map((tier) => ({ tier, items: list.filter((s) => s.tier === tier) }))
+  .filter((group) => group.items.length > 0);
+---
+
+<section id="sponsors" class="mx-auto max-w-6xl scroll-mt-20 px-4 py-20 sm:px-6">
+  <h2 class="font-slab text-3xl font-bold text-brand sm:text-4xl">Sponsors &amp; Partners</h2>
+  <p class="mt-2 text-lg text-neutral-600">
+    The companies and communities making this weekend possible.
+  </p>
+  <div class="mt-8">
+    {tiers.length === 0 ? (
+      <ComingSoon message="Sponsor lineup is being finalized. Want to support the event? Get in touch." />
+    ) : (
+      tiers.map((group) => (
+        <div class="mt-8">
+          <h3 class="text-sm font-bold tracking-widest text-neutral-500 uppercase">
+            {group.tier}
+          </h3>
+          <ul class="mt-4 flex flex-wrap items-center gap-8">
+            {group.items.map((sponsor) => (
+              <li>
+                <a href={sponsor.url ?? '#'} class="flex items-center gap-3">
+                  {sponsor.logo ? (
+                    <img src={sponsor.logo} alt={sponsor.name} class="h-12" loading="lazy" />
+                  ) : (
+                    <span class="font-slab text-xl font-semibold text-neutral-700">
+                      {sponsor.name}
+                    </span>
+                  )}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    )}
+  </div>
+</section>

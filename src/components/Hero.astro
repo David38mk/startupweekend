@@ -1,0 +1,37 @@
+---
+import event from '../data/event.json';
+---
+
+<section id="top" class="bg-gradient-to-br from-brand-dark via-brand to-brand-dark text-white">
+  <div class="mx-auto flex max-w-6xl flex-col items-start gap-6 px-4 py-24 sm:px-6 lg:py-32">
+    <span
+      class="rounded-full border border-white/30 bg-white/10 px-4 py-1 text-sm font-medium tracking-wide uppercase"
+    >
+      {event.theme} Edition · {event.year}
+    </span>
+    <h1 class="font-slab max-w-3xl text-4xl leading-tight font-bold sm:text-5xl lg:text-6xl">
+      {event.name}
+    </h1>
+    <p class="max-w-2xl text-lg text-white/85 sm:text-xl">
+      54 hours. One weekend. Pitch your idea, build a team, and launch a fintech startup at the
+      largest entrepreneurial event in North Macedonia.
+    </p>
+    <div class="flex flex-wrap items-center gap-4 text-white/90">
+      <span class="flex items-center gap-2 font-medium">
+        📅 {event.datesLabel}
+        {event.datesArePlaceholder && (
+          <span class="text-sm text-white/60">(to be confirmed)</span>
+        )}
+      </span>
+      <span class="flex items-center gap-2 font-medium">
+        📍 {event.venue.name}, {event.venue.city}
+      </span>
+    </div>
+    <a
+      href="#tickets"
+      class="mt-4 rounded-full bg-accent px-8 py-4 text-lg font-bold text-white shadow-lg transition-colors hover:bg-accent-dark"
+    >
+      Save Your Spot
+    </a>
+  </div>
+</section>

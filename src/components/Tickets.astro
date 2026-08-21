@@ -1,0 +1,35 @@
+---
+import event from '../data/event.json';
+
+const ticketsLive = Boolean(event.ticketUrl);
+---
+
+<section id="tickets" class="scroll-mt-20 bg-brand py-20 text-white">
+  <div class="mx-auto max-w-3xl px-4 text-center sm:px-6">
+    <h2 class="font-slab text-3xl font-bold sm:text-4xl">Don't Miss Out</h2>
+    <p class="mt-4 text-lg text-white/85">
+      Spots are limited — the last edition sold out. Grab your ticket and spend one weekend
+      building something real.
+    </p>
+    {ticketsLive ? (
+      <a
+        href={event.ticketUrl}
+        class="mt-8 inline-block rounded-full bg-accent px-10 py-4 text-lg font-bold shadow-lg transition-colors hover:bg-accent-dark"
+      >
+        Buy Tickets
+      </a>
+    ) : (
+      <div class="mt-8">
+        <button
+          type="button"
+          disabled
+          aria-disabled="true"
+          class="cursor-not-allowed rounded-full bg-white/20 px-10 py-4 text-lg font-bold text-white/60"
+        >
+          Buy Tickets
+        </button>
+        <p class="mt-3 text-sm text-white/70">Ticket sales open soon — check back shortly.</p>
+      </div>
+    )}
+  </div>
+</section>

@@ -1,0 +1,34 @@
+---
+const stats = [
+  { value: '54', label: 'hours from idea to pitch' },
+  { value: '430K+', label: 'entrepreneurs worldwide' },
+  { value: '150+', label: 'countries in the network' },
+];
+---
+
+<section id="about" class="mx-auto max-w-6xl scroll-mt-20 px-4 py-20 sm:px-6">
+  <h2 class="font-slab text-3xl font-bold text-brand sm:text-4xl">What is Startup Weekend?</h2>
+  <div class="mt-6 grid gap-10 lg:grid-cols-2">
+    <div class="space-y-4 text-lg leading-relaxed text-neutral-700">
+      <p>
+        Techstars Startup Weekend is a 3-day hackathon where you pitch ideas, form teams,
+        validate a real problem, build a prototype, and present it to a panel of judges —
+        all in one weekend. Part of the global Techstars network that has launched more than
+        430,000 young entrepreneurs worldwide.
+      </p>
+      <p>
+        This edition focuses on <strong class="text-brand">FinTech</strong>: how technology
+        reshapes the way we save, spend, invest, and manage money. Developers, designers,
+        entrepreneurs, and students are all welcome — no experience required.
+      </p>
+    </div>
+    <div class="grid grid-cols-3 gap-4 self-center">
+      {stats.map((stat) => (
+        <div class="rounded-2xl bg-brand-light p-5 text-center">
+          <div class="font-slab text-3xl font-bold text-brand">{stat.value}</div>
+          <div class="mt-1 text-sm text-neutral-600">{stat.label}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

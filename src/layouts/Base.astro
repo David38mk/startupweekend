@@ -1,0 +1,33 @@
+---
+import '../styles/global.css';
+import event from '../data/event.json';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = event.name,
+  description = `${event.name} — a 3-day startup hackathon in ${event.venue.city}. Pitch ideas, build teams, launch a startup in 54 hours.`,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Roboto+Slab:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-white font-sans text-neutral-900 antialiased">
+    <slot />
+  </body>
+</html>

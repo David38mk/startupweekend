@@ -1,0 +1,13 @@
+---
+import event from '../data/event.json';
+---
+
+<footer class="border-t border-neutral-200 bg-neutral-50">
+  <div
+    class="mx-auto flex max-w-6xl flex-col items-center gap-2 px-4 py-8 text-center text-sm text-neutral-600 sm:px-6"
+  >
+    <div class="font-slab text-base font-bold text-brand">{event.shortName}</div>
+    <p>Organized by {event.organizer} · {event.venue.city}</p>
+    <p>© {event.year} {event.shortName}. Techstars Startup Weekend is a Techstars program.</p>
+  </div>
+</footer>
