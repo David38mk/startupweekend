@@ -6,8 +6,10 @@ Status: accepted
 ## Context
 
 We need an event landing page cloning the structure of the Eventzilla Startup
-Weekend Skopje page, styled with the Startup Club Skopje palette
-(primary `#0E766D`, secondary `#E86E24`, Roboto / Roboto Slab). It starts as a
+Weekend Skopje page. Originally styled with the Startup Club Skopje palette
+(`#0E766D` / `#E86E24`, Roboto); superseded 2026-08 by the official Techstars
+brand palette (Phosphor `#39C463`, Slate `#8298AB`, black/white) with a
+Helvetica Neue system font stack. It starts as a
 single page with stubbed tickets and coming-soon speakers/sponsors, but must
 scale as sections and real content are added. Hosting is Hostinger. Billing
 will be a redirect to an external Payment Provider — Eventzilla or CaSys

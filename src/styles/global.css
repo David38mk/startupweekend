@@ -1,12 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  /* Startup Club Skopje brand palette (from their Elementor kit) */
-  --color-brand: #0e766d;
-  --color-brand-dark: #0a544e;
-  --color-brand-light: #eaf4f3;
-  --color-accent: #e86e24;
-  --color-accent-dark: #c95a17;
+  /* Techstars brand palette (brandguides.brandfolder.com/techstars-brand/color) */
+  --color-brand: #000000;
+  --color-brand-dark: #181c22;
+  --color-brand-light: #f1f5fa;
+  --color-accent: #39c463; /* Phosphor */
+  --color-accent-dark: #31a955;
+  --color-slate: #8298ab;
 
   --font-sans: "Helvetica Neue", Helvetica, Arial, ui-sans-serif, sans-serif;
 }
