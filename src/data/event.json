@@ -1,10 +1,10 @@
 {
-  "name": "Techstars Startup Weekend FinTech Skopje 2026",
+  "name": "Techstars Startup Weekend Skopje 2026",
   "shortName": "Startup Weekend Skopje",
-  "theme": "FinTech",
+  "theme": null,
   "year": 2026,
-  "datesLabel": "Oct 31 – Nov 2, 2026",
-  "datesArePlaceholder": true,
+  "datesLabel": "Nov 6 – 8, 2026",
+  "datesArePlaceholder": false,
   "venue": {
     "name": "ProCredit Bank HQ",
     "city": "Skopje, North Macedonia"
