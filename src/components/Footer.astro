@@ -1,11 +1,14 @@
 ---
+import { Image } from 'astro:assets';
 import event from '../data/event.json';
+import techstarsLogo from '../assets/logos/techstars-primary-black.png';
 ---
 
 <footer class="border-t border-neutral-200 bg-neutral-50">
   <div
     class="mx-auto flex max-w-6xl flex-col items-center gap-2 px-4 py-8 text-center text-sm text-neutral-600 sm:px-6"
   >
+    <Image src={techstarsLogo} alt="Techstars" class="h-10 w-auto" densities={[1, 2]} />
     <div class="text-base font-bold text-brand">{event.shortName}</div>
     <p>Organized by {event.organizer} · {event.venue.city}</p>
     <p>© {event.year} {event.shortName}. Techstars Startup Weekend is a Techstars program.</p>

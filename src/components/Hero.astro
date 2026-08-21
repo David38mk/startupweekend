@@ -1,9 +1,12 @@
 ---
+import { Image } from 'astro:assets';
 import event from '../data/event.json';
+import techstarsLogo from '../assets/logos/techstars-primary-white.svg';
 ---
 
 <section id="top" class="bg-gradient-to-br from-brand-dark via-brand to-brand-dark text-white">
   <div class="mx-auto flex max-w-6xl flex-col items-start gap-6 px-4 py-24 sm:px-6 lg:py-32">
+    <Image src={techstarsLogo} alt="Techstars" class="h-8 w-auto" />
     <span
       class="rounded-full border border-white/30 bg-white/10 px-4 py-1 text-sm font-medium tracking-wide uppercase"
     >
