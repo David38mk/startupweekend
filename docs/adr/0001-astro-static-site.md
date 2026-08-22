@@ -11,7 +11,9 @@ Weekend Skopje page. Originally styled with the Startup Club Skopje palette
 brand palette (Phosphor `#39C463`, Slate `#8298AB`, black/white) with a
 Helvetica Neue system font stack. It starts as a
 single page with stubbed tickets and coming-soon speakers/sponsors, but must
-scale as sections and real content are added. Hosting is Hostinger. Billing
+scale as sections and real content are added. Hosting: GoDaddy Web Hosting
+Economy (cPanel shared; chosen 2026-08 over the earlier Hostinger plan because
+domain and hosting were bought together at GoDaddy). Billing
 will be a redirect to an external Payment Provider — Eventzilla or CaSys
 (CPAY) — never an on-site checkout.
 
@@ -29,20 +31,20 @@ Alternatives considered:
 Astro + Tailwind CSS, fully static output (`astro build` → plain HTML/CSS).
 Speakers, sponsors, agenda live as data files (JSON/content collections), so
 adding content is a data edit, not a layout edit. Deployed as static files to
-Hostinger shared hosting.
+GoDaddy shared hosting via GitHub Actions (build + FTP upload of `dist/`).
 
 Payments: the Buy Tickets button redirects out.
 - Eventzilla: a plain link, zero backend.
 - CaSys/CPAY: requires a server-side signed POST (merchant secret must not be
   in browser JS). If chosen, a single small PHP signing endpoint is added
-  next to the static files — Hostinger shared hosting runs PHP, so this does
+  next to the static files — GoDaddy shared hosting runs PHP, so this does
   not force a VPS or a framework change.
 
 ## Consequences
 
-- Cheapest Hostinger plan suffices now; no Node runtime anywhere.
+- Cheap shared hosting suffices; no Node runtime anywhere in production.
 - Content updates require a rebuild + deploy (acceptable: content changes are
   infrequent and editor-less; mitigate with CI auto-deploy on push).
 - If the site ever needs real server logic beyond payment signing (accounts,
   own checkout), revisit: Astro can flip to hybrid SSR with a Node adapter,
-  which would then require a Hostinger VPS.
+  which would then require Node hosting (VPS or a PaaS).
